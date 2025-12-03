@@ -3,242 +3,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Play — JackpotHub.cloud</title>
-  <meta name="description" content="Play free-to-play social casino style demos on JackpotHub.cloud. No real-money gambling or prizes. 18+ only.">
+  <title>Play — Spinrocker</title>
+  <meta name="description" content="Play free-to-play social casino style games on Spinrocker. No real-money gambling or prizes. 18+ only.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
 :root{
-  --bg: #060a14;
-  --panel: rgba(255,255,255,0.05);
-  --panel-strong: rgba(255,255,255,0.08);
-  --text: #e9eeff;
-  --muted: #b7c2db;
-  --heading: #fdf6ff;
-  --accent: #f5c452;
-  --accent-2: #70f0c7;
-  --border: rgba(255,255,255,0.12);
-  --radius: 14px;
+  --bg: #0b0f18;
+  --bg-2: #0f1224;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #f2f5ff;
+  --muted: #b9c5e3;
+  --heading: #ffffff;
+  --accent: #ffb86c;
+  --accent-2: #7ad7f0;
+  --border: rgba(255,255,255,0.16);
+  --radius: 16px;
   --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
   --font-body: "Poppins", "Inter", system-ui, sans-serif;
-  --shadow: 0 24px 70px rgba(0,0,0,0.5);
+  --shadow: 0 30px 80px rgba(0,0,0,0.55);
 }
 
 *{box-sizing:border-box}
-body{
+body.sr-shell-p5xk{
   margin:0;
   font-family:var(--font-body);
   background:
-    radial-gradient(circle at 15% 10%, rgba(112,240,199,0.08), transparent 28%),
-    radial-gradient(circle at 80% 8%, rgba(245,196,82,0.12), transparent 30%),
-    linear-gradient(140deg, #070c19, #050812 60%, #0b1021);
+    radial-gradient(circle at 20% 20%, rgba(122,215,240,0.16), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(255,184,108,0.16), transparent 40%),
+    linear-gradient(135deg, var(--bg), var(--bg-2) 60%, #0a0a16);
   color:var(--text);
-  line-height:1.65;
+  line-height:1.7;
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
 }
 a{color:var(--accent-2); text-decoration:none; transition:color .18s, opacity .18s}
 a:hover{color:var(--accent); opacity:0.9}
-.link-accent{color:var(--accent); font-weight:700}
-.link-accent:hover{color:var(--accent-2)}
+.link-accent-z0rn{color:var(--accent); font-weight:700}
+.link-accent-z0rn:hover{color:var(--accent-2)}
 img{max-width:100%; display:block}
 
-.container{width:min(1140px, 100% - 2rem); margin:0 auto}
+.sr-container-g1j0{width:min(1180px, 100% - 2.5rem); margin:0 auto}
 
-.notice-banner{
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#031017;
-  padding:0.55rem 0;
+.sr-banner-s2qr{
+  background:linear-gradient(120deg, rgba(122,215,240,0.2), rgba(255,184,108,0.35));
+  color:#09121e;
+  padding:0.65rem 0;
   text-align:center;
   font-weight:700;
-  border-bottom:1px solid rgba(0,0,0,0.2);
-  box-shadow:0 10px 28px rgba(0,0,0,0.35);
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  box-shadow:0 14px 32px rgba(0,0,0,0.35);
   position:relative;
   z-index:70;
 }
-.banner-inner{
+.sr-banner-inner-j8du{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:0.65rem;
+  gap:0.75rem;
   flex-wrap:wrap;
-  font-size:0.97rem;
+  font-size:0.98rem;
 }
-.banner-pill{
-  background:rgba(0,0,0,0.12);
-  color:#031017;
-  padding:0.35rem 0.7rem;
+.sr-pill-w3ah{
+  background:rgba(0,0,0,0.2);
+  color:#fefefe;
+  padding:0.35rem 0.8rem;
   border-radius:999px;
   font-weight:800;
-  letter-spacing:0.5px;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
 }
 
-.jackpothub-cloud-nav{
-  background:rgba(6,10,20,0.92);
+.sr-nav-a9ht{
+  background:rgba(10,13,25,0.9);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(16px);
   position:sticky;
   top:0;
   z-index:60;
-  padding:0.85rem 0;
+  padding:0.8rem 0;
 }
-.jackpothub-cloud-nav .navbar-brand{
+.sr-brand-b4lm{
   display:flex;
   align-items:center;
-  gap:0.65rem;
+  gap:0.75rem;
   padding:0;
 }
-.brand-logo{
-  width:132px;
+.sr-logo-w3uk{
+  width:124px;
   height:auto;
   display:block;
-  border-radius:12px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.45);
+  border-radius:14px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.5);
 }
-.jackpothub-cloud-nav .nav-link{
+.sr-nav-link-m0ck{
   color:var(--text);
   font-weight:600;
-  margin:0 0.35rem;
-  padding:0.35rem 0.65rem;
-  border-radius:10px;
-  transition:background .15s, color .15s;
+  margin:0 0.3rem;
+  padding:0.4rem 0.75rem;
+  border-radius:12px;
+  transition:background .15s, color .15s, transform .15s;
 }
-.jackpothub-cloud-nav .nav-link.active,
-.jackpothub-cloud-nav .nav-link:hover{
+.sr-nav-link-m0ck:hover,
+.sr-nav-link-m0ck.active{
   background:var(--panel);
   color:var(--accent);
+  transform:translateY(-1px);
 }
 .navbar-toggler{
   border:1px solid var(--border);
   color:var(--text);
 }
-.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(112,240,199,0.18)}
+.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(122,215,240,0.18)}
 
-.jackpothub-cloud-btn{
+.sr-btn-prim-b7ce,
+.sr-btn-ghost-e1rt{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:0.4rem;
-  padding:0.78rem 1.6rem;
-  border-radius:12px;
+  padding:0.85rem 1.7rem;
+  border-radius:14px;
   font-weight:700;
   border:1px solid transparent;
   cursor:pointer;
   transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
   text-decoration:none;
 }
-.jackpothub-cloud-btn.primary{
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#060a14;
-  box-shadow:0 14px 36px rgba(0,0,0,0.4);
+.sr-btn-prim-b7ce{
+  background:linear-gradient(120deg, var(--accent), var(--accent-2));
+  color:#0c1324;
+  box-shadow:0 16px 40px rgba(0,0,0,0.45);
 }
-.jackpothub-cloud-btn.primary:hover{transform:translateY(-2px)}
-.jackpothub-cloud-btn.outline{
+.sr-btn-prim-b7ce:hover{transform:translateY(-2px)}
+.sr-btn-ghost-e1rt{
   background:var(--panel);
   border-color:var(--border);
   color:var(--text);
 }
-.jackpothub-cloud-btn.outline:hover{color:var(--accent)}
+.sr-btn-ghost-e1rt:hover{color:var(--accent)}
 
-.section-title{
+.sr-section-title-c6ur{
   font-family:var(--font-heading);
   color:var(--heading);
-  font-size:2.1rem;
-  margin:0 0 0.45rem;
+  font-size:2.25rem;
+  margin:0 0 0.55rem;
 }
-.section-sub{margin:0 0 1rem; color:var(--muted)}
+.sr-section-sub-a3ms{margin:0 0 1.1rem; color:var(--muted)}
 
-.jackpothub-cloud-play{
-  padding:3.5rem 0;
+.sr-section-play-v5dm{
+  padding:3.8rem 0;
   text-align:center;
 }
-.game-wrapper{
+.sr-play-wrap-k9sn{
   margin:2rem auto;
-  display:flex;
-  justify-content:center;
-}
-.game-wrapper > .w-100{
   width:100%;
-  max-width:920px;
+  max-width:940px;
   text-align:center;
 }
-.game-frame{
+.sr-play-label-a4tv{
+  display:inline-flex;
+  align-items:center;
+  gap:0.45rem;
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  background:rgba(255,184,108,0.15);
+  color:var(--accent);
+  font-weight:700;
+  border:1px solid rgba(255,184,108,0.45);
+}
+.sr-play-frame-b3ys{
   position:relative;
   width:100%;
-  max-width:920px;
   border-radius:14px;
   overflow:hidden;
-  background:linear-gradient(160deg, rgba(245,196,82,0.14), rgba(112,240,199,0.08));
+  background:linear-gradient(160deg, rgba(255,184,108,0.16), rgba(122,215,240,0.12));
   border:1px solid var(--border);
-  box-shadow:0 16px 40px rgba(0,0,0,0.45);
+  box-shadow:0 18px 46px rgba(0,0,0,0.55);
+  margin-top:0.75rem;
 }
-.game-frame::before{content:""; display:block; padding-top:56.25%;}
-.game-frame iframe{
+.sr-play-frame-b3ys::before{content:\"\"; display:block; padding-top:56.25%;}
+.sr-play-frame-b3ys iframe{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   border:0;
 }
-.game-caption{
-  margin-top:0.5rem;
+.sr-game-caption-f7dr{
+  margin-top:0.55rem;
   color:var(--muted);
   font-weight:600;
 }
 
-.jackpothub-cloud-footer{
-  background:rgba(6,10,20,0.95);
+.sr-footer-t2qn{
+  background:rgba(10,13,25,0.95);
   color:var(--text);
   text-align:center;
-  padding:3.2rem 1rem 2.4rem;
+  padding:3.2rem 1rem 2.5rem;
   border-top:1px solid var(--border);
   position:relative;
   overflow:hidden;
 }
-.jackpothub-cloud-footer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 50% 20%, rgba(245,196,82,0.04), transparent 65%);
+.sr-footer-t2qn::before{
+  content:\"\"; position:absolute; inset:0;
+  background:radial-gradient(circle at 50% 18%, rgba(255,184,108,0.06), transparent 68%);
   z-index:0;
 }
-.jackpothub-cloud-footer .container{position:relative; z-index:1}
-.footer-brand{
+.sr-footer-t2qn .sr-container-g1j0{position:relative; z-index:1}
+.sr-footer-brand-m5lw{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:0.7rem;
+  gap:0.8rem;
   margin-bottom:1rem;
 }
-.footer-links{
+.sr-footer-links-r0fs{
   display:flex;
   justify-content:center;
-  gap:0.85rem;
+  gap:0.9rem;
   flex-wrap:wrap;
   padding:0;
   margin:0 0 1rem;
   list-style:none;
 }
-.footer-links a{
+.sr-footer-links-r0fs a{
   color:var(--accent);
   font-weight:600;
 }
-.footer-links a:hover{color:var(--accent-2)}
-.footer-copy{
-  color:var(--muted);
-  margin:0;
-}
+.sr-footer-links-r0fs a:hover{color:var(--accent-2)}
+.sr-copy-w9nj{color:var(--muted); margin:0}
 
-.jackpothub-cloud-scroll{
+.sr-scroll-top-y0ke{
   position:fixed;
   right:22px;
   bottom:22px;
-  width:44px;
-  height:44px;
+  width:46px;
+  height:46px;
   border-radius:50%;
   border:none;
   background:var(--accent);
-  color:#060a14;
+  color:#0c1324;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -249,10 +259,10 @@ img{max-width:100%; display:block}
   transition:all .16s;
   z-index:90;
 }
-.jackpothub-cloud-scroll.show{opacity:1; visibility:visible}
-.jackpothub-cloud-scroll:hover{background:var(--accent-2)}
+.sr-scroll-top-y0ke.show{opacity:1; visibility:visible}
+.sr-scroll-top-y0ke:hover{background:var(--accent-2)}
 
-.sr-only{
+.sr-screen-reader-i2jx{
   position:absolute;
   width:1px;
   height:1px;
@@ -264,82 +274,82 @@ img{max-width:100%; display:block}
 }
 
 @media (max-width: 768px){
-  .game-frame{max-width:100%}
-  .jackpothub-cloud-nav{padding:0.75rem 0}
+  .sr-nav-a9ht{padding:0.7rem 0}
+  .sr-logo-w3uk{width:110px}
 }
 @media (max-width: 576px){
-  .brand-logo{width:114px}
+  .sr-logo-w3uk{width:104px}
 }
   </style>
 </head>
-<body class="jackpothub-cloud jackpothub-cloud-o9e2">
+<body class="sr-shell-p5xk">
 
 <!-- Persistent responsible-play banner -->
-<div class="notice-banner notice-banner-d4v6">
-  <div class="container container-n5s9 banner-inner banner-inner-e0g3">
-    <span class="banner-pill banner-pill-u5l2">18+</span>
-    <span>JackpotHub is a free-to-play social casino experience. No real-money gambling or prizes. 18+ only. Please play responsibly.</span>
+<div class="sr-banner-s2qr">
+  <div class="sr-container-g1j0 sr-banner-inner-j8du">
+    <span class="sr-pill-w3ah">18+</span>
+    <span>Spinrocker is a free-to-play social casino experience. No real-money gambling or prizes. 18+ only. Please play responsibly.</span>
   </div>
 </div>
 
 <!-- Header / navigation -->
-<nav class="navbar navbar-h1d6 navbar-expand-lg navbar-expand-lg-x1e0 jackpothub-cloud-nav jackpothub-cloud-nav-s2b8">
-  <div class="container container-n5s9 d-flex d-flex-l2v1 align-items-center align-items-center-i0e4 justify-content-between justify-content-between-u9t9">
-    <a class="navbar-brand navbar-brand-e4n4" href="/">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<nav class="navbar navbar-expand-lg sr-nav-a9ht">
+  <div class="sr-container-g1j0 d-flex align-items-center justify-content-between">
+    <a class="navbar-brand sr-brand-b4lm" href="/">
+      <img class="sr-logo-w3uk" src="../assets/img.png" alt="Spinrocker logo">
+      <span class="sr-screen-reader-i2jx">Spinrocker</span>
     </a>
     <button class="navbar-toggler navbar-toggler-s3p3" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon navbar-toggler-icon-k8w2"><i class="fas fas-i3o7 fa-bars fa-bars-k2s8"></i></span>
     </button>
 
-    <div class="collapse collapse-s1p8 navbar-collapse navbar-collapse-u8n2 justify-content-end justify-content-end-q4o3" id="navMenu">
-      <ul class="navbar-nav navbar-nav-s2k8 mb-2 mb-2-s6k8 mb-lg-0 mb-lg-0-w4j8 align-items-lg-center align-items-lg-center-u1g7">
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/">Home</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4 active active-o1t1" href="/play">Play</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/#contact">Contact</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/disclaimer">Disclaimer</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/privacy-policy">Privacy</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/terms-and-conditions">Terms</a></li>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck active" href="/play">Play</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/disclaimer">Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/privacy-policy">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/terms-and-conditions">Terms</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <main>
-  <!-- Play gallery of external demos -->
-  <section class="jackpothub-cloud-play jackpothub-cloud-play-n0x6">
-    <div class="container container-n5s9">
-      <h1 class="section-title section-title-a7o7">Play demos</h1>
-      <p class="section-sub section-sub-x7g6">Free-to-play social casino style experiences. External embeds, no deposits or prizes.</p>
+  <!-- Play gallery -->
+  <section class="sr-section-play-v5dm">
+    <div class="sr-container-g1j0">
+      <h1 class="sr-section-title-c6ur">Play games</h1>
+      <p class="sr-section-sub-a3ms">Free-to-play social casino style experiences. External embeds, no deposits or prizes.</p>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Live preview</div>
-          <div class="game-frame game-frame-d2c1">
+      <div class="sr-play-wrap-k9sn">
+        <div class="w-100">
+          <div class="sr-play-label-a4tv">Live preview</div>
+          <div class="sr-play-frame-b3ys">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=stadiumofriches&lang=en_GB&practice=1&channel=desktop&demo=2&refresh=1763688384036" title="Stadium of Riches" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Stadium of Riches (external launch).</p>
+          <p class="sr-game-caption-f7dr">Embedded play: Stadium of Riches (external launch).</p>
         </div>
       </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Mobile-friendly preview</div>
-          <div class="game-frame game-frame-d2c1">
+      <div class="sr-play-wrap-k9sn">
+        <div class="w-100">
+          <div class="sr-play-label-a4tv">Mobile-friendly preview</div>
+          <div class="sr-play-frame-b3ys">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ringsofprosperity&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688502976" title="Rings of Prosperity" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Rings of Prosperity (external launch).</p>
+          <p class="sr-game-caption-f7dr">Embedded play: Rings of Prosperity (external launch).</p>
         </div>
       </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Low-motion preview</div>
-          <div class="game-frame game-frame-d2c1">
+      <div class="sr-play-wrap-k9sn">
+        <div class="w-100">
+          <div class="sr-play-label-a4tv">Low-motion preview</div>
+          <div class="sr-play-frame-b3ys">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=lawnndisorder&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688570336" title="Lawn n Disorder" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Lawn n Disorder (external launch).</p>
+          <p class="sr-game-caption-f7dr">Embedded play: Lawn n Disorder (external launch).</p>
         </div>
       </div>
     </div>
@@ -347,14 +357,14 @@ img{max-width:100%; display:block}
 </main>
 
 <!-- Footer -->
-<footer class="jackpothub-cloud-footer jackpothub-cloud-footer-e3t4">
-  <div class="container container-n5s9">
-    <div class="footer-brand footer-brand-b0c2">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<footer class="sr-footer-t2qn">
+  <div class="sr-container-g1j0">
+    <div class="sr-footer-brand-m5lw">
+      <img class="sr-logo-w3uk" src="../assets/img.png" alt="Spinrocker logo">
+      <span class="sr-screen-reader-i2jx">Spinrocker</span>
     </div>
 
-    <ul class="footer-links footer-links-o9a5">
+    <ul class="sr-footer-links-r0fs">
       <li><a href="/">Home</a></li>
       <li><a href="/play">Play</a></li>
       <li><a href="/#contact">Contact</a></li>
@@ -363,13 +373,11 @@ img{max-width:100%; display:block}
       <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
     </ul>
 
-    <p class="footer-copy footer-copy-f9e9">
-      © <span data-year></span> JackpotHub.cloud
-    </p>
+    <p class="sr-copy-w9nj">© <span data-year></span> Spinrocker</p>
   </div>
 </footer>
 
-<button id="hubScrollTop" class="jackpothub-cloud-scroll jackpothub-cloud-scroll-b6z2" aria-label="Scroll to top">
+<button id="hubScrollTop" class="sr-scroll-top-y0ke" aria-label="Scroll to top">
   <i class="fas fas-i3o7 fa-chevron-up fa-chevron-up-v5k2"></i>
 </button>
 
