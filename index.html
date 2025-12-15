@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spinrocker â Social casino sandbox, no cash required</title>
+  <title>Spinrocker - Social casino sandbox, no cash required</title>
   <meta name="description" content="Spinrocker is a lean, free-to-play social casino sandbox. Instant browser capsules, 18+ only, zero deposits or prizes.">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -11,25 +11,28 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
 :root{
-  --bg: #0b0f18;
-  --bg-2: #0f1224;
-  --panel: rgba(255,255,255,0.06);
-  --panel-strong: rgba(255,255,255,0.1);
-  --text: #f2f5ff;
-  --muted: #b9c5e3;
-  --heading: #ffffff;
-  --accent: #ffb86c;
-  --accent-2: #7ad7f0;
-  --border: rgba(255,255,255,0.16);
+  --bg: #f5f7fb;
+  --bg-2: #eef2f7;
+  --surface: #ffffff;
+  --surface-strong: #e8eef8;
+  --ink: #202124;
+  --muted: #5f6368;
+  --heading: #1f1f1f;
+  --accent: #1a73e8;
+  --accent-2: #34a853;
+  --accent-warm: #fbbc05;
+  --accent-red: #ea4335;
+  --border: #e2e6ef;
   --radius: 16px;
-  --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
-  --font-body: "Poppins", "Inter", system-ui, sans-serif;
-  --shadow: 0 30px 80px rgba(0,0,0,0.55);
+  --font-heading: "Sora", "Manrope", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --shadow: 0 20px 60px rgba(26,115,232,0.12);
+  --shadow-soft: 0 12px 32px rgba(32,33,36,0.08);
 }
 
 *{box-sizing:border-box}
@@ -37,92 +40,66 @@ body.sr-shell-p5xk{
   margin:0;
   font-family:var(--font-body);
   background:
-    radial-gradient(circle at 20% 20%, rgba(122,215,240,0.16), transparent 35%),
-    radial-gradient(circle at 80% 10%, rgba(255,184,108,0.16), transparent 40%),
-    linear-gradient(135deg, var(--bg), var(--bg-2) 60%, #0a0a16);
-  color:var(--text);
+    radial-gradient(circle at 14% 18%, rgba(26,115,232,0.12), transparent 36%),
+    radial-gradient(circle at 86% 12%, rgba(52,168,83,0.12), transparent 40%),
+    radial-gradient(circle at 30% 82%, rgba(251,188,5,0.12), transparent 38%),
+    var(--bg);
+  color:var(--ink);
   line-height:1.7;
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
 }
-a{color:var(--accent-2); text-decoration:none; transition:color .18s, opacity .18s}
-a:hover{color:var(--accent); opacity:0.9}
+a{color:var(--accent); text-decoration:none; transition:color .18s, opacity .18s}
+a:hover{color:var(--accent-red); opacity:0.92}
 .link-accent-z0rn{color:var(--accent); font-weight:700}
-.link-accent-z0rn:hover{color:var(--accent-2)}
-img{max-width:100%; display:block}
+.link-accent-z0rn:hover{color:var(--accent-red)}
+img{max-width:100%; display:block; border-radius:8px}
 
-.sr-container-g1j0{width:min(1180px, 100% - 2.5rem); margin:0 auto}
-
-.sr-banner-s2qr{
-  background:linear-gradient(120deg, rgba(122,215,240,0.2), rgba(255,184,108,0.35));
-  color:#8999ae;
-  padding:0.65rem 0;
-  text-align:center;
-  font-weight:700;
-  border-bottom:1px solid rgba(0,0,0,0.25);
-  box-shadow:0 14px 32px rgba(0,0,0,0.35);
-  position:relative;
-  z-index:70;
-}
-.sr-banner-inner-j8du{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:0.75rem;
-  flex-wrap:wrap;
-  font-size:0.98rem;
-}
-.sr-pill-w3ah{
-  background:rgba(0,0,0,0.2);
-  color:#783030;
-  padding:0.35rem 0.8rem;
-  border-radius:999px;
-  font-weight:800;
-  letter-spacing:0.6px;
-  text-transform:uppercase;
-}
+.sr-container-g1j0{width:min(1200px, 100% - 2.6rem); margin:0 auto}
 
 .sr-nav-a9ht{
-  background:rgba(10,13,25,0.9);
+  background:rgba(255,255,255,0.94);
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(16px);
+  box-shadow:0 10px 30px rgba(32,33,36,0.08);
+  backdrop-filter:blur(12px);
   position:sticky;
   top:0;
   z-index:60;
-  padding:0.8rem 0;
+  padding:0.95rem 0;
 }
 .sr-brand-b4lm{
   display:flex;
   align-items:center;
   gap:0.75rem;
   padding:0;
+  text-decoration:none;
 }
 .sr-logo-w3uk{
-  width:124px;
+  width:132px;
   height:auto;
   display:block;
   border-radius:14px;
-  box-shadow:0 12px 32px rgba(0,0,0,0.5);
+  box-shadow:0 10px 20px rgba(26,115,232,0.12);
 }
 .sr-nav-link-m0ck{
-  color:var(--text);
-  font-weight:600;
+  color:var(--ink);
+  font-weight:700;
   margin:0 0.3rem;
-  padding:0.4rem 0.75rem;
+  padding:0.45rem 0.9rem;
   border-radius:12px;
   transition:background .15s, color .15s, transform .15s;
 }
 .sr-nav-link-m0ck:hover,
 .sr-nav-link-m0ck.active{
-  background:var(--panel);
+  background:linear-gradient(90deg, rgba(26,115,232,0.1), rgba(52,168,83,0.1));
   color:var(--accent);
   transform:translateY(-1px);
 }
 .navbar-toggler{
   border:1px solid var(--border);
-  color:var(--text);
+  color:var(--ink);
 }
-.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(122,215,240,0.18)}
+.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(26,115,232,0.2)}
 
 .sr-btn-prim-b7ce,
 .sr-btn-ghost-e1rt{
@@ -130,94 +107,127 @@ img{max-width:100%; display:block}
   align-items:center;
   justify-content:center;
   gap:0.4rem;
-  padding:0.85rem 1.7rem;
+  padding:0.9rem 1.8rem;
   border-radius:14px;
   font-weight:700;
-  border:#7f0b0b;
+  border:1px solid transparent;
   cursor:pointer;
-  transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border .2s ease;
   text-decoration:none;
 }
 .sr-btn-prim-b7ce{
-  background:linear-gradient(120deg, var(--accent), var(--accent-2));
-  color:#0c1324;
-  box-shadow:0 16px 40px rgba(0,0,0,0.45);
+  background:linear-gradient(120deg, #1a73e8, #34a853);
+  color:#ffffff;
+  border-color:rgba(26,115,232,0.45);
+  box-shadow:0 14px 40px rgba(26,115,232,0.25);
 }
-.sr-btn-prim-b7ce:hover{transform:translateY(-2px)}
+.sr-btn-prim-b7ce:hover{transform:translateY(-2px); box-shadow:0 16px 44px rgba(26,115,232,0.3)}
 .sr-btn-ghost-e1rt{
-  background:var(--panel);
+  background:var(--surface);
   border-color:var(--border);
-  color:var(--text);
+  color:var(--ink);
+  box-shadow:0 10px 26px rgba(32,33,36,0.08);
 }
-.sr-btn-ghost-e1rt:hover{color:var(--accent)}
+.sr-btn-ghost-e1rt:hover{color:var(--accent); border-color:rgba(26,115,232,0.4)}
 
 .sr-eyebrow-d7pc{
   text-transform:uppercase;
-  letter-spacing:2.2px;
-  font-size:0.8rem;
+  letter-spacing:2.4px;
+  font-size:0.82rem;
   color:var(--muted);
   margin:0 0 0.35rem;
 }
 .sr-section-title-c6ur{
   font-family:var(--font-heading);
   color:var(--heading);
-  font-size:2.25rem;
+  font-size:2.35rem;
   margin:0 0 0.55rem;
+  letter-spacing:-0.3px;
 }
-.sr-section-sub-a3ms{margin:0 0 1.1rem; color:var(--muted)}
+.sr-section-sub-a3ms{margin:0 0 1.1rem; color:var(--muted); max-width:720px}
 
 .sr-hero-c3ne{
   position:relative;
-  padding:clamp(3rem, 6vw, 5rem) 0;
+  padding:clamp(3.2rem, 6vw, 5.4rem) 0;
   overflow:hidden;
 }
 .sr-hero-c3ne::before,
 .sr-hero-c3ne::after{
   content:"";
   position:absolute;
-  width:460px; height:460px;
+  width:420px; height:420px;
   border-radius:50%;
   filter:blur(120px);
-  opacity:0.4;
+  opacity:0.6;
   z-index:0;
 }
-.sr-hero-c3ne::before{top:-140px; left:-80px; background:radial-gradient(circle, rgba(122,215,240,0.55), transparent 62%)}
-.sr-hero-c3ne::after{bottom:-160px; right:-30px; background:radial-gradient(circle, rgba(255,184,108,0.55), transparent 62%)}
+.sr-hero-c3ne::before{top:-140px; left:-120px; background:radial-gradient(circle, rgba(26,115,232,0.25), transparent 64%)}
+.sr-hero-c3ne::after{bottom:-200px; right:-120px; background:radial-gradient(circle, rgba(251,188,5,0.28), transparent 62%)}
 .sr-hero-inner-w1sn{
   position:relative;
   z-index:1;
   display:grid;
-  grid-template-columns:1fr;
   gap:1.8rem;
   text-align:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:clamp(2rem, 5vw, 3rem);
+  border-radius:calc(var(--radius) + 4px);
+  box-shadow:var(--shadow-soft);
+  overflow:hidden;
+}
+.sr-hero-inner-w1sn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:6px;
+  background:linear-gradient(90deg, #1a73e8 0%, #34a853 33%, #fbbc05 66%, #ea4335 100%);
 }
 .sr-hero-title-w4qm{
   font-family:var(--font-heading);
   font-size:3rem;
   line-height:1.08;
   margin:0 0 0.65rem;
+  color:var(--heading);
 }
 .sr-hero-sub-j2fe{
   color:var(--muted);
   margin:0 auto;
-  max-width:820px;
+  max-width:860px;
+  font-size:1.04rem;
 }
-.sr-hero-cta-k7eq{display:flex; justify-content:center; gap:0.9rem; flex-wrap:wrap; margin-top:1.2rem}
+.sr-hero-cta-k7eq{display:flex; justify-content:center; gap:0.9rem; flex-wrap:wrap; margin-top:0.8rem}
 .sr-hero-badges-f4an{
   display:flex;
   justify-content:center;
   gap:0.65rem;
   flex-wrap:wrap;
 }
+.sr-pill-w3ah{
+  background:var(--surface);
+  color:var(--ink);
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:0.2px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 24px rgba(32,33,36,0.08);
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+}
 .sr-pill-w3ah.sr-pill-accent-s9ne{
-  background:rgba(255,184,108,0.16);
+  border-color:rgba(26,115,232,0.35);
   color:var(--accent);
-  border:1px solid rgba(255,184,108,0.45);
+  background:linear-gradient(120deg, rgba(26,115,232,0.08), rgba(52,168,83,0.08));
+  box-shadow:0 12px 26px rgba(26,115,232,0.14);
 }
 
 .sr-section-features-k5yb{
   padding:3.8rem 0;
-  background:#a83434;
+  background:linear-gradient(180deg, #f7f9ff 0%, #eef4ff 100%);
 }
 .sr-grid-feat-r1nk{
   display:grid;
@@ -226,15 +236,28 @@ img{max-width:100%; display:block}
   margin-top:1.8rem;
 }
 .sr-card-feat-u6pw{
-  background:linear-gradient(140deg, rgba(255,255,255,0.06), rgba(122,215,240,0.04));
+  background:var(--surface);
   border:1px solid var(--border);
   padding:1.5rem;
-  border-radius:14px;
-  color:var(--text);
+  border-radius:var(--radius);
+  color:var(--ink);
   transition:transform .16s, box-shadow .16s, border-color .16s;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
+  position:relative;
+  overflow:hidden;
 }
-.sr-card-feat-u6pw:hover{transform:translateY(-4px); box-shadow:0 20px 50px rgba(0,0,0,0.65); border-color:rgba(255,184,108,0.5)}
+.sr-card-feat-u6pw::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(26,115,232,0.06), rgba(52,168,83,0.04));
+  opacity:0;
+  transition:opacity .2s;
+  z-index:0;
+}
+.sr-card-feat-u6pw:hover{transform:translateY(-4px); box-shadow:0 18px 46px rgba(26,115,232,0.16); border-color:rgba(26,115,232,0.38)}
+.sr-card-feat-u6pw:hover::after{opacity:1}
+.sr-card-feat-u6pw > *{position:relative; z-index:1}
 .sr-icon-feat-m8rd{font-size:1.9rem; color:var(--accent); margin-bottom:0.45rem}
 .sr-card-feat-u6pw h4{margin:0 0 0.4rem; font-family:var(--font-heading)}
 .sr-card-feat-u6pw p{margin:0; color:var(--muted)}
@@ -247,20 +270,27 @@ img{max-width:100%; display:block}
   align-items:center;
 }
 .sr-about-visual-l0rx{
-  background:linear-gradient(155deg, rgba(122,215,240,0.16), rgba(255,184,108,0.18));
+  background:linear-gradient(155deg, rgba(26,115,232,0.08), rgba(52,168,83,0.06));
   border:1px solid var(--border);
   border-radius:18px;
   padding:1.5rem;
   position:relative;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
   overflow:hidden;
 }
-.sr-about-visual-l0rx img{border-radius:14px; box-shadow:0 18px 40px rgba(0,0,0,0.58)}
+.sr-about-visual-l0rx::after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:14px;
+  border:1px dashed rgba(26,115,232,0.2);
+}
+.sr-about-visual-l0rx img{border-radius:14px; box-shadow:0 18px 40px rgba(32,33,36,0.16)}
 .sr-about-copy-y6mn p{color:var(--muted); margin:0 0 0.85rem}
 .sr-about-copy-y6mn .sr-btn-prim-b7ce{margin-top:0.5rem}
 
 .sr-section-contact-b9te{
-  background:#a83434;
+  background:linear-gradient(135deg, #e8f0fe 0%, #e6f4ea 100%);
   padding:4rem 0;
 }
 .sr-grid-contact-l2np{
@@ -269,46 +299,50 @@ img{max-width:100%; display:block}
   gap:1.8rem;
 }
 .sr-contact-box-h5qm{
-  background:linear-gradient(150deg, rgba(255,255,255,0.06), rgba(122,215,240,0.06));
+  background:var(--surface);
   border:1px solid var(--border);
   border-radius:14px;
-  padding:1.2rem;
-  color:var(--text);
-  box-shadow:var(--shadow);
+  padding:1.4rem;
+  color:var(--ink);
+  box-shadow:var(--shadow-soft);
 }
 .sr-contact-box-h5qm p{margin:0.2rem 0; color:var(--muted)}
-.sr-contact-box-h5qm strong{color:var(--text)}
+.sr-contact-box-h5qm strong{color:var(--heading)}
 .sr-contact-form-q3zv{
-  background:var(--panel);
+  background:var(--surface);
   border:1px solid var(--border);
   border-radius:14px;
-  padding:1.2rem;
+  padding:1.3rem;
   display:flex;
   flex-direction:column;
   gap:1rem;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
 }
 .sr-field-n1uz{
   width:100%;
-  padding:0.85rem 1rem;
+  padding:0.9rem 1rem;
   border-radius:11px;
   border:1px solid var(--border);
-  background:#6f0b0b;
-  color:var(--text);
+  background:#ffffff;
+  color:var(--ink);
   font-size:1rem;
   transition:border .16s, box-shadow .16s;
 }
 .sr-field-n1uz:focus{
   outline:none;
-  border-color:var(--accent-2);
-  box-shadow:0 0 0 3px rgba(122,215,240,0.2);
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(26,115,232,0.2);
 }
-.sr-status-x0jp{
+.sr-status-x0jp,
+.form-status{
   min-height:20px;
   color:var(--muted);
+  margin:0;
 }
-.sr-status-x0jp.success{color:#9af7c9}
-.sr-status-x0jp.error{color:var(--accent)}
+.sr-status-x0jp.success,
+.form-status.success{color:var(--accent-2)}
+.sr-status-x0jp.error,
+.form-status.error{color:var(--accent-red)}
 
 .sr-section-notice-m8cz{
   padding:3.6rem 0;
@@ -316,12 +350,12 @@ img{max-width:100%; display:block}
 .sr-notice-box-q7lt{
   max-width:940px;
   margin:0 auto;
-  background:var(--panel);
+  background:var(--surface);
   border:1px solid var(--border);
-  padding:1.6rem;
+  padding:1.8rem;
   border-radius:18px;
   text-align:center;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
 }
 .sr-notice-title-s4ye{
   color:var(--heading);
@@ -331,14 +365,15 @@ img{max-width:100%; display:block}
 .sr-notice-box-q7lt p{color:var(--muted); margin:0 0 1rem}
 .sr-notice-btn-p7zo{
   background:var(--accent);
-  color:#0c1324;
+  color:#ffffff;
   padding:0.7rem 1.4rem;
   border-radius:999px;
   font-weight:700;
   display:inline-block;
-  border:#7f0b0b;
+  border:1px solid rgba(26,115,232,0.4);
+  box-shadow:0 10px 24px rgba(26,115,232,0.2);
 }
-.sr-notice-btn-p7zo:hover{background:var(--accent-2); color:#03131f}
+.sr-notice-btn-p7zo:hover{background:var(--accent-2); color:#ffffff}
 
 .sr-section-reviews-p1av{
   padding:3.8rem 0;
@@ -352,21 +387,21 @@ img{max-width:100%; display:block}
   gap:1.1rem;
 }
 .sr-card-rev-q2bv{
-  background:linear-gradient(150deg, rgba(255,255,255,0.05), rgba(122,215,240,0.05));
+  background:var(--surface);
   border:1px solid var(--border);
   padding:1.2rem;
   border-radius:14px;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
 }
-.sr-quote-i8sm{font-style:italic; color:var(--text); margin:0 0 0.65rem}
+.sr-quote-i8sm{font-style:italic; color:var(--ink); margin:0 0 0.65rem}
 .sr-author-t9bz{color:var(--accent); font-weight:700; margin:0}
 
 .sr-footer-t2qn{
-  background:rgba(10,13,25,0.95);
-  color:var(--text);
+  background:#202124;
+  color:#e8eaed;
   text-align:center;
-  padding:3.2rem 1rem 2.5rem;
-  border-top:1px solid var(--border);
+  padding:3rem 1rem 2.5rem;
+  border-top:4px solid #1a73e8;
   position:relative;
   overflow:hidden;
 }
@@ -374,10 +409,20 @@ img{max-width:100%; display:block}
   content:"";
   position:absolute;
   inset:0;
-  background:radial-gradient(circle at 50% 18%, rgba(255,184,108,0.06), transparent 68%);
+  background:radial-gradient(circle at 50% 18%, rgba(26,115,232,0.1), transparent 70%);
   z-index:0;
 }
-.sr-footer-t2qn .sr-container-g1j0{position:relative; z-index:1}
+.sr-footer-t2qn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:4px;
+  width:100%;
+  background:linear-gradient(90deg, #1a73e8, #34a853, #fbbc05, #ea4335);
+  z-index:1;
+}
+.sr-footer-t2qn .sr-container-g1j0{position:relative; z-index:2}
 .sr-footer-brand-m5lw{
   display:flex;
   align-items:center;
@@ -395,11 +440,17 @@ img{max-width:100%; display:block}
   list-style:none;
 }
 .sr-footer-links-r0fs a{
-  color:var(--accent);
+  color:#e8eaed;
   font-weight:600;
 }
-.sr-footer-links-r0fs a:hover{color:var(--accent-2)}
-.sr-copy-w9nj{color:var(--muted); margin:0}
+.sr-footer-links-r0fs a:hover{color:#fbbc05}
+.sr-copy-w9nj{color:#c3c4c7; margin:0}
+.sr-footer-t2qn .sr-notice-box-q7lt{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.1);
+  color:#e8eaed;
+}
+.sr-footer-t2qn .sr-notice-box-q7lt p{color:#c3c4c7}
 
 .sr-scroll-top-y0ke{
   position:fixed;
@@ -409,816 +460,67 @@ img{max-width:100%; display:block}
   height:46px;
   border-radius:50%;
   border:none;
-  background:var(--accent);
-  color:#0c1324;
+  background:linear-gradient(135deg, #1a73e8, #ea4335);
+  color:#ffffff;
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  box-shadow:0 14px 34px rgba(0,0,0,0.55);
+  box-shadow:0 14px 34px rgba(26,115,232,0.35);
   opacity:0;
   visibility:hidden;
   transition:all .16s;
   z-index:90;
 }
 .sr-scroll-top-y0ke.show{opacity:1; visibility:visible}
-.sr-scroll-top-y0ke:hover{background:var(--accent-2)}
-
-.sr-screen-reader-i2jx{
-  position:absolute;
-  width:1px;
-  height:1px;
-  padding:0;
-  margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  border:0;
-}
+.sr-scroll-top-y0ke:hover{background:linear-gradient(135deg, #34a853, #1a73e8)}
+  
+  .sr-screen-reader-i2jx{
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    border:0;
+  }
 
 @media (max-width: 992px){
   .sr-grid-about-d3ye,
   .sr-grid-contact-l2np{
     grid-template-columns:1fr;
   }
-  .sr-hero-title-w4qm{font-size:2.5rem}
+  .sr-hero-inner-w1sn{padding:2rem}
 }
 @media (max-width: 768px){
-  .sr-hero-title-w4qm{font-size:2.1rem}
-  .sr-nav-a9ht{padding:0.7rem 0}
-  .sr-logo-w3uk{width:110px}
+  .sr-hero-title-w4qm{font-size:2.4rem}
+  .sr-nav-a9ht{padding:0.75rem 0}
+  .sr-logo-w3uk{width:120px}
 }
 @media (max-width: 576px){
   .sr-hero-cta-k7eq{flex-direction:column}
-  .sr-logo-w3uk{width:104px}
+  .sr-logo-w3uk{width:110px}
+  .sr-container-g1j0{width:min(1200px, 100% - 1.6rem)}
 }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FORCED-BG */ body { background: #222325 !important; background-color: #222325 !important; }
-</style>
+  </style>
 </head>
-<body>
+<body class="sr-shell-p5xk">
 
-<div class="sr-banner-s2qr">
-  <div class="sr-container-g1j0 sr-banner-inner-j8du">
-    <span class="sr-pill-w3ah" style=""><br></span>
-    <span style=""><br></span>
-  </div>
-</div>
-
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sr-nav-a9ht">
-  <div class="sr-container-g1j0 d-flex align-items-center justify-content-between">
-    <a class="navbar-brand sr-brand-b4lm" href="/" style="position: relative;">
+  <div class="sr-container-g1j0 d-flex align-items-center">
+    <a class="navbar-brand sr-brand-b4lm" href="/">
       <img class="sr-logo-w3uk" src="assets/img.png" alt="Spinrocker logo">
       <span class="sr-screen-reader-i2jx">Spinrocker</span>
     </a>
-    <button class="navbar-toggler navbar-toggler-f6h3" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon navbar-toggler-icon-x7i3"><i class="fas fas-c9r9 fa-bars fa-bars-y5b5"></i></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
-        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck active" href="#home" style="">Home</a></li>
+        <li class="nav-item"><a class="nav-link sr-nav-link-m0ck active" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/play">Play</a></li>
         <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="#contact">Contact</a></li>
         <li class="nav-item"><a class="nav-link sr-nav-link-m0ck" href="/disclaimer">Disclaimer</a></li>
@@ -1232,144 +534,143 @@ img{max-width:100%; display:block}
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="sr-hero-c3ne">
-  <div class="sr-container-g1j0 sr-hero-inner-w1sn text-center">
-    <p class="sr-eyebrow-d7pc">Entertainment only â no cash, no prizes</p>
-    <h1 class="sr-hero-title-w4qm">Spinrocker is a neon-bright social casino sandbox for quick spins.</h1>
-    <p class="sr-hero-sub-j2fe">
-      Launch mobile-friendly previews with zero payments or prizes. Built to keep campaigns polished, transparent,
-      and clearly labeled as entertainment-only for adults 18+.
-    </p>
-    <div class="sr-hero-cta-k7eq">
-      <a href="/play" class="sr-btn-prim-b7ce">Play now</a>
-      <a href="#disclaimer-block" class="sr-btn-ghost-e1rt">See safety note</a>
-    </div>
-    <div class="sr-hero-badges-f4an">
-      <span class="sr-pill-w3ah sr-pill-accent-s9ne"><i class="fa-solid fa-bolt"></i>Instant load</span>
-      <span class="sr-pill-w3ah"><i class="fa-solid fa-shield"></i>18+ entertainment</span>
-      <span class="sr-pill-w3ah"><i class="fa-solid fa-mobile-screen"></i>Mobile first</span>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="sr-section-features-k5yb">
-  <div class="sr-container-g1j0 text-center">
-    <h2 class="sr-section-title-c6ur mb-1">Built to look premium</h2>
-    <p class="sr-section-sub-a3ms">Calm polish with a brighter, casino-forward identity.</p>
-    <div class="sr-grid-feat-r1nk">
-      <div class="sr-card-feat-u6pw">
-        <i class="fa-solid fa-wand-magic-sparkles sr-icon-feat-m8rd"></i>
-        <h4>Intentional visuals</h4>
-        <p>Gradient glow frames, clean hierarchy, and focused messaging to spotlight your creatives.</p>
-      </div>
-      <div class="sr-card-feat-u6pw">
-        <i class="fa-solid fa-gauge-high sr-icon-feat-m8rd"></i>
-        <h4>Instant launch</h4>
-        <p>Lightweight HTML5 shells keep load times short and battery use lean across devices.</p>
-      </div>
-      <div class="sr-card-feat-u6pw">
-        <i class="fa-solid fa-shield-halved sr-icon-feat-m8rd"></i>
-        <h4>Responsible by design</h4>
-        <p>18+ gating, plain-language disclaimers, and zero payment flows keep expectations clear.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="sr-section-about-d8tc">
-  <div class="sr-container-g1j0">
-    <div class="sr-grid-about-d3ye">
-      <div class="sr-about-visual-l0rx">
-        <img src="assets/herobackground01.webp" alt="Spinrocker highlight collage">
-      </div>
-      <div class="sr-about-copy-y6mn">
-        <h2 class="sr-section-title-c6ur">From calm Arctic to bold Spinrocker</h2>
-        <p>
-          We kept the minimal, low-friction spirit and tuned it for <strong>Spinrocker</strong>.
-          Expect fast loads and gentle motion, paired with a neon-gold palette and clearer calls-to-action.
+<main>
+  <!-- HERO -->
+  <section id="home" class="sr-hero-c3ne">
+    <div class="sr-container-g1j0">
+      <div class="sr-hero-inner-w1sn text-center">
+        <p class="sr-eyebrow-d7pc">Entertainment only - no cash, no prizes</p>
+        <h1 class="sr-hero-title-w4qm">Spinrocker is a clean, Google-inspired social casino sandbox for quick spins.</h1>
+        <p class="sr-hero-sub-j2fe">
+          Launch mobile-friendly previews instantly with zero payments or prizes. The layout uses the familiar Google color rhythm so your campaigns feel polished, transparent, and clearly marked for adults 18+.
         </p>
+        <div class="sr-hero-cta-k7eq">
+          <a href="/play" class="sr-btn-prim-b7ce">Play now</a>
+          <a href="#disclaimer-block" class="sr-btn-ghost-e1rt">See safety note</a>
+        </div>
+        <div class="sr-hero-badges-f4an">
+          <span class="sr-pill-w3ah sr-pill-accent-s9ne"><i class="fa-solid fa-bolt"></i>Instant load</span>
+          <span class="sr-pill-w3ah"><i class="fa-solid fa-shield"></i>18+ entertainment</span>
+          <span class="sr-pill-w3ah"><i class="fa-solid fa-mobile-screen"></i>Mobile first</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="sr-section-features-k5yb">
+    <div class="sr-container-g1j0 text-center">
+      <h2 class="sr-section-title-c6ur mb-1">Built to look premium</h2>
+      <p class="sr-section-sub-a3ms mx-auto">Polished visuals, transparent messaging, and a friendly Google color system.</p>
+      <div class="sr-grid-feat-r1nk">
+        <div class="sr-card-feat-u6pw">
+          <i class="fa-solid fa-wand-magic-sparkles sr-icon-feat-m8rd"></i>
+          <h4>Intentional visuals</h4>
+          <p>Soft gradients, clean hierarchy, and a multi-color accent line keep the creative front and center.</p>
+        </div>
+        <div class="sr-card-feat-u6pw">
+          <i class="fa-solid fa-gauge-high sr-icon-feat-m8rd"></i>
+          <h4>Instant launch</h4>
+          <p>Lightweight HTML5 shells keep load times short and battery use lean across devices.</p>
+        </div>
+        <div class="sr-card-feat-u6pw">
+          <i class="fa-solid fa-shield-halved sr-icon-feat-m8rd"></i>
+          <h4>Responsible by design</h4>
+          <p>18+ gating, plain-language disclaimers, and zero payment flows keep expectations clear.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sr-section-about-d8tc">
+    <div class="sr-container-g1j0">
+      <div class="sr-grid-about-d3ye">
+        <div class="sr-about-visual-l0rx">
+          <img src="assets/herobackground01.webp" alt="Spinrocker highlight collage">
+        </div>
+        <div class="sr-about-copy-y6mn">
+          <h2 class="sr-section-title-c6ur">From calm Arctic to bold Spinrocker</h2>
+          <p>
+            We kept the minimal, low-friction spirit and tuned it for <strong>Spinrocker</strong>. Expect fast loads and gentle motion, paired with a Google-inspired palette and clearer calls-to-action.
+          </p>
+          <p>
+            Each page is tuned for campaigns, social casino style experiences, and quick product previews. No downloads, no wallets, just a focused lane to showcase what matters.
+          </p>
+          <a href="#contact" class="sr-btn-prim-b7ce">Collaborate with us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sr-section-contact-b9te">
+    <div class="sr-container-g1j0">
+      <h2 class="sr-section-title-c6ur text-center mb-1">Contact</h2>
+      <p class="sr-section-sub-a3ms text-center mx-auto">Share feedback, request campaign slots, or ask for a custom embed.</p>
+
+      <div class="sr-grid-contact-l2np">
+        <div class="sr-contact-box-h5qm">
+          <h4>Get in touch</h4>
+          <p><strong>Partnerships and campaigns:</strong> <a href="mailto:hello@spinrocker.com" class="link-accent-z0rn">hello@spinrocker.com</a></p>
+          <p><strong>Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM (PST)</p>
+          <p><strong>Where we work:</strong> Remote-first studio</p>
+          <p><strong>Response time:</strong> Typically within 24-48 hours</p>
+          <p><strong>What to include:</strong> project goals, timing, preferred creative specs.</p>
+        </div>
+
+        <form id="hubForm" class="sr-contact-form-q3zv" novalidate="">
+          <input class="sr-field-n1uz" type="text" id="hubName" placeholder="Your name" required="" minlength="2" maxlength="60">
+          <input class="sr-field-n1uz" type="email" id="hubEmail" placeholder="you@example.com" required="">
+          <textarea class="sr-field-n1uz" id="hubMessage" rows="5" placeholder="Your message" required=""></textarea>
+          <button type="submit" class="sr-btn-prim-b7ce">Send message</button>
+          <p id="hubStatus" class="sr-status-x0jp" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER CARD -->
+  <section id="disclaimer-block" class="sr-section-notice-m8cz text-center" aria-labelledby="disclaimer-title">
+    <div class="sr-container-g1j0">
+      <div class="sr-notice-box-q7lt mx-auto p-4">
+        <h2 id="disclaimer-title" class="sr-notice-title-s4ye">
+          <i class="fas fas-c9r9 fa-circle-exclamation fa-circle-exclamation-l6e8"></i> Important notice
+        </h2>
         <p>
-          Each page is tuned for campaigns, social casino style experiences, and quick product previews. No downloads, no wallets,
-          just a focused lane to showcase what matters.
+          <strong>Spinrocker</strong> hosts free-to-play, social casino-style browser experiences. There are <strong>no monetary features, deposits, or prizes</strong> anywhere on this site. Access is intended for users aged <strong>18+</strong>. Please take breaks and play responsibly.
         </p>
-        <a href="#contact" class="sr-btn-prim-b7ce">Collaborate with us</a>
+        <a href="/disclaimer" class="sr-notice-btn-p7zo">Read full disclaimer</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="sr-section-contact-b9te">
-  <div class="sr-container-g1j0">
-    <h2 class="sr-section-title-c6ur text-center mb-1">Contact</h2>
-    <p class="sr-section-sub-a3ms text-center">Share feedback, request campaign slots, or ask for a custom embed.</p>
-
-    <div class="sr-grid-contact-l2np">
-      <div class="sr-contact-box-h5qm">
-        <h4>Get in touch</h4>
-        <p><strong>Partnerships &amp; campaigns:</strong> <a href="mailto:hello@spinrocker.com" class="link-accent-z0rn">hello@spinrocker.com</a></p>
-        <p><strong>Hours:</strong> MonâFri, 9:00 AM â 5:00 PM (PST)</p>
-        <p><strong>Where we work:</strong> Remote-first studio</p>
-        <p><strong>Response time:</strong> Typically within 24â48 hours</p>
-        <p><strong>What to include:</strong> project goals, timing, preferred creative specs.</p>
-      </div>
-
-      <form id="hubForm" class="sr-contact-form-q3zv" novalidate="">
-        <input class="sr-field-n1uz" type="text" id="hubName" placeholder="Your name" required="" minlength="2" maxlength="60">
-        <input class="sr-field-n1uz" type="email" id="hubEmail" placeholder="you@example.com" required="">
-        <textarea class="sr-field-n1uz" id="hubMessage" rows="5" placeholder="Your message" required=""></textarea>
-        <button type="submit" class="sr-btn-prim-b7ce">Send message</button>
-        <p id="hubStatus" class="sr-status-x0jp" aria-live="polite"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- DISCLAIMER CARD -->
-<section id="disclaimer-block" class="sr-section-notice-m8cz text-center" aria-labelledby="disclaimer-title">
-  <div class="sr-container-g1j0">
-    <div class="sr-notice-box-q7lt mx-auto p-4">
-      <h2 id="disclaimer-title" class="sr-notice-title-s4ye">
-        <i class="fas fas-c9r9 fa-circle-exclamation fa-circle-exclamation-l6e8"></i> Important notice
-      </h2>
-      <p>
-        <strong>Spinrocker</strong> hosts free-to-play, social casino-style browser experiences.
-        There are <strong>no monetary features, deposits, or prizes</strong> anywhere on this site.
-        Access is intended for users aged <strong>18+</strong>. Please take breaks and play responsibly.
-      </p>
-      <a href="/disclaimer" class="sr-notice-btn-p7zo">Read full disclaimer</a>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="sr-section-reviews-p1av">
-  <div class="sr-container-g1j0">
-    <h2 class="sr-section-title-c6ur mb-1 text-center">What visitors say</h2>
-    <p class="sr-section-sub-a3ms text-center">Early testers on the rebrand.</p>
-    <div class="sr-grid-rev-h4up">
-      <div class="sr-card-rev-q2bv">
-        <p class="sr-quote-i8sm">âFeels premium without dragging my phone down. Itâs snappy and clear about being entertainment.â</p>
-        <h5 class="sr-author-t9bz">â Mira L.</h5>
-      </div>
-      <div class="sr-card-rev-q2bv">
-        <p class="sr-quote-i8sm">âExactly the quick break I want between tasks â fast load, bold visuals, no cash strings attached.â</p>
-        <h5 class="sr-author-t9bz">â Devon R.</h5>
-      </div>
-      <div class="sr-card-rev-q2bv">
-        <p class="sr-quote-i8sm">âThe messaging is upfront about 18+ and no prizes. Great for campaign previews on mobile.â</p>
-        <h5 class="sr-author-t9bz">â Sarai P.</h5>
-      </div>
-      <div class="sr-card-rev-q2bv">
-        <p class="sr-quote-i8sm">âA clean shell for social casino content. Loads quick, keeps focus on the creative.â</p>
-        <h5 class="sr-author-t9bz">â Theo J.</h5>
+  <!-- REVIEWS -->
+  <section id="reviews" class="sr-section-reviews-p1av">
+    <div class="sr-container-g1j0">
+      <h2 class="sr-section-title-c6ur mb-1 text-center">What visitors say</h2>
+      <p class="sr-section-sub-a3ms text-center">Notes from early testers on the rebrand.</p>
+      <div class="sr-grid-rev-h4up">
+        <div class="sr-card-rev-q2bv">
+          <p class="sr-quote-i8sm">"Feels premium without dragging my phone down. It is snappy and clear about being entertainment."</p>
+          <h5 class="sr-author-t9bz">- Mira L.</h5>
+        </div>
+        <div class="sr-card-rev-q2bv">
+          <p class="sr-quote-i8sm">"Exactly the quick break I want between tasks - fast load, bold visuals, no cash strings attached."</p>
+          <h5 class="sr-author-t9bz">- Devon R.</h5>
+        </div>
+        <div class="sr-card-rev-q2bv">
+          <p class="sr-quote-i8sm">"The messaging is upfront about 18+ and no prizes. Great for campaign previews on mobile."</p>
+          <h5 class="sr-author-t9bz">- Sarai P.</h5>
+        </div>
+        <div class="sr-card-rev-q2bv">
+          <p class="sr-quote-i8sm">"A clean shell for social casino content. Loads quick, keeps focus on the creative."</p>
+          <h5 class="sr-author-t9bz">- Theo J.</h5>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- FOOTER -->
 <footer class="sr-footer-t2qn">
@@ -1382,8 +683,7 @@ img{max-width:100%; display:block}
     <div class="sr-notice-box-q7lt">
       <h5 class="sr-notice-title-s4ye"><i class="fas fas-c9r9 fa-snowflake fa-snowflake-c4q3 me-2 me-2-e8c6"></i> Responsible play notice</h5>
       <p>
-        Spinrocker is for adults <strong>18+</strong> and is always free-to-play. There are no prizes, wagers, or cash rewards.
-        Enjoy short sessions, take breaks often, and keep it lighthearted.
+        Spinrocker is for adults <strong>18+</strong> and is always free-to-play. There are no prizes, wagers, or cash rewards. Enjoy short sessions, take breaks often, and keep it lighthearted.
       </p>
     </div>
 
@@ -1393,10 +693,10 @@ img{max-width:100%; display:block}
       <li><a href="#contact">Contact</a></li>
       <li><a href="/disclaimer">Disclaimer</a></li>
       <li><a href="/privacy-policy">Privacy Policy</a></li>
-      <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+      <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
     </ul>
 
-    <p class="sr-copy-w9nj">Â© <span data-year=""></span> Spinrocker</p>
+    <p class="sr-copy-w9nj">(c) <span data-year=""></span> Spinrocker</p>
   </div>
 </footer>
 
@@ -1408,8 +708,6 @@ img{max-width:100%; display:block}
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/main.js" defer=""></script>
-
-
 
 </body>
 </html>
